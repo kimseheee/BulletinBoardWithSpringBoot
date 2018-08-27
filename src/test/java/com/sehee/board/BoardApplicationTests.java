@@ -1,5 +1,7 @@
 package com.sehee.board;
 
+import java.sql.Connection;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +27,9 @@ public class BoardApplicationTests {
 	@Test
 	public void testMapper() throws Exception {
 		BoardVO vo = new BoardVO();
-		
-		vo.setSubject("제목");
-		vo.setContent("내용");
-		vo.setWriter("작성자");
+		vo.setSubject("Subject");
+		vo.setContent("Content");
+		vo.setWriter("Writer");
 		
 		mapper.boardInsert(vo);
 	}
